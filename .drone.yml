@@ -13,8 +13,8 @@ steps:
 
   - name: deploy
     commands:
-#      - sudo docker container stop billford-server
-#      - sudo docker container rm billford-server
+      - sudo docker container stop stanbic-server
+      - sudo docker container rm stanbic-server
       - sudo docker run --name stanbic-server -d  -p 4100:8080 stanbic-server-${DRONE_BRANCH}:${DRONE_BUILD_NUMBER}
     when:
       branch:
